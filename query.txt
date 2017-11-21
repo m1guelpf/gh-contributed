@@ -1,0 +1,20 @@
+{
+  viewer {
+    name
+    login
+    contributedRepositories(first: 100, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC) {
+      edges {
+        node {
+          nameWithOwner
+          url
+          watchers {
+            totalCount
+          }
+          stargazers {
+            totalCount
+          }
+        }
+      }
+    }
+  }
+}
